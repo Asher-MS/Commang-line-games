@@ -1,3 +1,4 @@
+  
 import pyfiglet
 import time
 import random
@@ -28,13 +29,15 @@ computer_score=0
 player_choice="null"
 computer_coice="null"
 def pwin():
-    print("You win")
+    global player_score
+    print("\nYou win")
     player_score+=1
 def cwin():
-    print("computer wins")
+    global computer_score
+    print("\ncomputer wins")
     computer_score+=1
 def tie():
-    print("its a TIE")
+    print("\nits a TIE")
 
 
 
@@ -55,22 +58,22 @@ while gameloop<5:                                                               
     if computer_choice==player_choice:
         tie()
     elif(computer_choice==1 and player_choice)==2:
-            print("computer choose Scissor")
+            print("\n\ncomputer choose Scissor")
             cwin()
     elif computer_choice==1 and player_choice==3:
-                print("computer choose Scissor")
+                print("\n\ncomputer choose Scissor")
                 pwin()
     elif computer_choice==2 and player_choice==1:
-                        print("computer choose paper")
+                        print("\n\ncomputer choose paper")
                         pwin()
     elif computer_choice==2 and player_choice==3:
-                            print("computer choose paper")
+                            print("\n\ncomputer choose paper")
                             cwin()
     elif computer_choice==3 and player_choice==1:
-                                print("computer choose Rock")
+                                print("\n\ncomputer choose Rock")
                                 cwin()
     elif computer_choice==3 and player_choice==2:
-                                    print("computer choose Rock")
+                                    print("\n\ncomputer choose Rock")
                                     pwin()
 
 
@@ -81,21 +84,21 @@ while gameloop<5:                                                               
 
 
     
+print("\n\n\n\nyour score is ")
+print(player_score)
 
+print("\n\n\ncomputer score is")
+print(computer_score)
 
-
-
-     
-    
-
-    
-    
-print("your score is "+player_score)
-print("computer score is"+computer_score)
-
-
+if computer_score>player_score:
+    print(pyfiglet.figlet_format("Congrats  Computer  WINs"))
+if player_score>computer_score:
+    print(pyfiglet.figlet_format("Congrats YOU Win"))
+if computer_score==player_score:
+    print(pyfiglet.figlet_format("ITS a TIE"))
 
 
 time.sleep(3)
                             
     
+
